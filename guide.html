@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>자동 기입기 — 그림으로 보는 사용법</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  body.page { max-width: 58rem; }
+  .hero { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+  .hero img { width: 56px; height: 56px; border-radius: 13px; }
+  .hero h1 { font-size: 26px; margin: 0; letter-spacing: -0.02em; }
+  .lead2 { font-size: 16px; color: var(--ink-soft); margin: 4px 0 26px; word-break: keep-all; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; padding: 0; list-style: none; }
+  .toc a { display: inline-block; font-size: 13px; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); text-decoration: none; background: var(--paper); }
+  .toc a:hover { border-color: var(--navy); color: var(--navy); }
+  section.g { margin: 0 0 40px; }
+  section.g h2 { font-size: 19px; margin: 0 0 6px; letter-spacing: -0.01em; display: flex; align-items: center; gap: 10px; }
+  section.g h2 .n { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: #fff; display: grid; place-items: center; font-size: 14px; }
+  @media (prefers-color-scheme: dark) { section.g h2 .n { color: #10131a; } }
+  section.g p, section.g li { font-size: 15px; line-height: 1.7; word-break: keep-all; }
+  section.g ul { padding-left: 20px; margin: 6px 0 12px; }
+  .shot { display: block; width: 100%; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(20,24,40,.08); margin: 10px 0 6px; }
+  .shot.narrow { max-width: 360px; }
+  .shot.mid { max-width: 520px; }
+  .cap2 { font-size: 13px; color: var(--ink-soft); margin: 0 0 4px; }
+  .note { border-left: 3px solid var(--navy); background: var(--surface); padding: 10px 14px; border-radius: 0 8px 8px 0; font-size: 14px; margin: 12px 0; }
+  .note.safe { border-left-color: var(--ok); }
+  table.keys { border-collapse: collapse; margin: 8px 0; }
+  table.keys td { padding: 6px 12px 6px 0; font-size: 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .legend2 { font-size: 14px; color: var(--ink-soft); margin: -14px 0 26px; padding: 10px 14px; border-radius: 10px; background: var(--surface); word-break: keep-all; }
+  .legend2 .sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -1px; margin-right: 5px; }
+  .legend2 .sw.tool { background: linear-gradient(90deg, #1f2b45 0 34%, #3b6fd4 34% 67%, #2e8b5e 67%); }
+  .legend2 .sw.site { background: #f2622e; border-radius: 0; }
+  .foot2 { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 14px; color: var(--ink-soft); display: grid; gap: 6px; }
+  .foot2 a { color: var(--navy); }
+</style>
+</head>
+<body class="page">
+  <div class="hero"><img src="icon128.png" alt=""><h1>그림으로 보는 사용법</h1></div>
+  <p class="lead2">본인인증·회원가입·주문서에서 늘 치는 이름·생년월일·휴대폰·이메일·주소. 자동 기입기는 칸을 알아보고, 들어갈 값을 먼저 보여 준 뒤 채웁니다.
+    값은 이 컴퓨터에만 있고 어디로도 보내지 않습니다.</p>
+  <p class="legend2"><span class="sw tool"></span><b>남색 막대 · 파란 점선 · 초록 ✓</b>가 자동 기입기예요.
+    그림 속 <span class="sw site"></span><b>주황색 «예시인증»</b>은 설명을 위한 가상의 사이트입니다.</p>
+  <ul class="toc">
+    <li><a href="#s1">내 정보 넣기</a></li><li><a href="#s2">처음 보는 폼</a></li><li><a href="#s3">하나씩 열리는 칸</a></li>
+    <li><a href="#s4">버튼 기억하기</a></li><li><a href="#s5">다음부터 알아서</a></li><li><a href="#s6">가입·주문서</a></li>
+    <li><a href="#s7">되돌리기·관리</a></li><li><a href="#s8">안전</a></li><li><a href="#s9">단축키</a></li>
+  </ul>
+
+  <section class="g" id="s1">
+    <h2><span class="n">1</span>시작하기 — 내 정보를 한 번 넣어 두세요</h2>
+    <p>설치하면 <b>시작하기</b>가 열려요. 다섯 단계(내 정보 · 쓸 곳 · 툴바·단축키 · 연습 · 안전)를 마쳐야 제대로 채워 드릴 수 있어요.
+      이름·휴대폰은 꼭 넣고, 휴대폰 앞자리·뒷번호, 이메일 아이디·도메인, 태어난 해·달·날처럼 <b>쪼개진 칸</b>에는 알아서 나눠 넣어요.</p>
+    <img class="shot" src="guide/welcome.jpg" alt="시작하기 — 다섯 단계 중 내 정보 넣기">
+    <p class="cap2">나중에 고치거나 주소·아이디를 더 넣을 때는 툴바 아이콘 → <b>입력값 관리</b>.</p>
+    <img class="shot" src="guide/options.jpg" alt="입력값 관리 — 내 정보와 자동으로 생기는 쪼갠 값">
+    <div class="note">처음 보는 사이트에서도 제안을 받으려면 같은 화면의 <b>모든 사이트에서 제안 받기</b>를 켜세요. 끄면 값을 기억한 사이트에서만 움직입니다.</div>
+  </section>
+
+  <section class="g" id="s2">
+    <h2><span class="n">2</span>처음 보는 폼 — 들어갈 값을 먼저 보여 줍니다</h2>
+    <p>알아본 칸 위에 <b>파란 점선</b>으로 들어갈 값이 겹쳐 보입니다. 페이지는 아직 그대로예요(칸에 값이 들어간 게 아니라 그림만 얹은 것).</p>
+    <ul>
+      <li>넣기 싫은 칸은 모서리의 <b>✓</b>를 눌러 뺍니다.</li>
+      <li>오른쪽 아래 막대의 <b>채우기</b>를 누르거나 단축키 <kbd>⇧⌘I</kbd>(윈도우 <kbd>Ctrl+Shift+K</kbd>)를 누르면 사람처럼 한 글자씩 들어갑니다.</li>
+      <li>종류가 틀렸으면 막대의 <b>자세히</b>에서 바꿉니다. 이 화면에서 다시 묻지 않게 할 수도 있어요.</li>
+    </ul>
+    <img class="shot" src="guide/offer.jpg" alt="통신사 버튼 위 파란 점선과 구석의 채우기 막대">
+  </section>
+
+  <section class="g" id="s3">
+    <h2><span class="n">3</span>칸이 하나씩 열려도 이어서 채웁니다</h2>
+    <p>본인확인 창은 이름을 넣으면 생년월일, 그다음 휴대폰 칸이 열리곤 해요. 열리는 대로 알아보고 이어서 넣습니다. 채운 칸은 <b>초록 테두리</b>로 잠깐 짚어 줘요.</p>
+    <img class="shot" src="guide/filled.jpg" alt="이름·생년월일·성별·휴대폰이 차례로 채워진 모습">
+  </section>
+
+  <section class="g" id="s4">
+    <h2><span class="n">4</span>늘 누르는 버튼은 우클릭으로 기억</h2>
+    <p>«문자(SMS)로 인증»·«간편인증»처럼 매번 같은 선택은 그 버튼에서 <b>우클릭 → 자동 기입기 → 이 버튼 누르기 기억하기</b>. 다음부터 대신 눌러 줍니다.</p>
+    <img class="shot" src="guide/remember.jpg" alt="이 버튼 누르기 기억하기 창">
+    <div class="note">칸 하나만 기억하고 싶을 때는 칸에서 우클릭 → <b>이 칸 값 기억하기</b>(단축키 <kbd>⇧⌘F</kbd>). 칸이 하나씩 나타나는 화면에서 편해요.</div>
+  </section>
+
+  <section class="g" id="s5">
+    <h2><span class="n">5</span>다음에 다시 열면 — 알아서 누르고 채웁니다</h2>
+    <p>한 번 채운 화면은 기억해 둡니다. 다음에 열면 묻지 않고 기억한 버튼을 누르고 칸을 채워요. 툴바 아이콘의 <b>초록 숫자</b>가 채운 칸 수입니다.</p>
+    <img class="shot" src="guide/auto.jpg" alt="다시 열었을 때 통신사·인증 방법을 누르고 네 칸을 채운 모습">
+  </section>
+
+  <section class="g" id="s6">
+    <h2><span class="n">6</span>쇼핑몰 가입·주문서도</h2>
+    <p>주문하시는 분·받으시는 분, 쪼개진 휴대폰 칸, 이메일 아이디와 도메인 목록, 상세주소까지 알아봅니다. 일반전화·배송 메모·결제는 건드리지 않아요.</p>
+    <img class="shot" src="guide/shop.jpg" alt="가상의 쇼핑몰 주문서에 제안이 뜬 모습">
+    <div class="note"><b>우편번호 검색</b> 창이 뜨면 저장해 둔 주소를 검색어로 미리 넣어 둡니다. <b>검색</b>을 누르고 목록에서 고르는 것은 직접 하세요.</div>
+  </section>
+
+  <section class="g" id="s7">
+    <h2><span class="n">7</span>되돌리기 · 지금 상황 보기 · 관리</h2>
+    <ul>
+      <li>채운 뒤 뜨는 알림의 <b>되돌리기</b>로 원래대로 돌립니다. 방금 기억한 것도 함께 지워요.</li>
+      <li>툴바 아이콘 숫자 — <b>파랑</b>은 제안을 띄운 칸 수, <b>초록</b>은 채운 칸 수.</li>
+      <li>기억한 값으로 알아서 채운 뒤 알림의 <b>값 고치기</b>로 칸마다 종류·값을 바꾸거나 뺍니다. <b>그만 채우기</b>를 누르면 그 화면은 더 채우지도 묻지도 않아요(기억은 남고, 다시 켤 수 있어요).
+        알림을 놓쳤으면 페이지에서 <b>우클릭 → 자동 기입기 → 이 화면에서 기억한 것 고치기</b>.</li>
+      <li>아이콘을 누르면 이 사이트에 기억해 둔 값(칸 · 종류 · 값)이 보입니다. <b>입력값 관리</b>에서 사이트별로 고치거나 지웁니다.</li>
+    </ul>
+    <img class="shot narrow" src="guide/toast.jpg" alt="기억한 값으로 채운 뒤 알림 — 되돌리기·값 고치기·그만 채우기">
+    <img class="shot mid" src="guide/edit.jpg" alt="값 고치기 창 — 칸마다 종류·값 바꾸기, 빼기, 이 화면 그만 채우기">
+    <img class="shot narrow" src="guide/popup.jpg" alt="팝업 — 이 화면에 기억해 둔 값">
+  </section>
+
+  <section class="g" id="s8">
+    <h2><span class="n">8</span>안전하게</h2>
+    <div class="note safe">
+      <b>값은 이 컴퓨터의 크롬 안에만, 암호화해서</b>(AES-256) 둡니다. 서버가 없고, 아무 데도 보내지 않으며, 구글 계정으로 동기화하지도 않아요.<br>
+      <b>채우기 전에는 사이트가 값을 못 봐요</b> — 미리보기는 사이트가 열 수 없는 층에 그리고, 사이트가 가짜 키로 채우게 할 수도 없어요. 화면 밖·투명한 상자에 숨긴 칸은 채우지 않습니다.<br>
+      <b>제출·동의·인증번호 요청은 언제나 직접</b> 누릅니다. 엔터 키도 보내지 않아요. 비밀번호·인증번호·보안문자·주민번호 뒷자리 칸은 채우지 않습니다.
+    </div>
+    <div class="note">
+      <b>못 막는 것도 있어요</b> — 암호를 푸는 열쇠도 같은 크롬 안에 있어서, 이 컴퓨터 계정에 들어온 사람이나 악성 프로그램까지는 막지 못해요.
+      칸에 들어간 값은 그 사이트가 받습니다. 공용 컴퓨터에서는 쓰지 말고, 믿는 사이트에서만 «기억»하세요. 자세한 내용은 입력값 관리 → <b>보안·개인정보</b>.
+    </div>
+  </section>
+
+  <section class="g" id="s9">
+    <h2><span class="n">9</span>단축키</h2>
+    <table class="keys">
+      <tr><td><kbd>⇧⌘I</kbd> · <kbd>Ctrl+Shift+K</kbd></td><td>이 화면 채우기 제안 보기 → 한 번 더 누르면 채우기</td></tr>
+      <tr><td><kbd>⇧⌘Y</kbd> · <kbd>Ctrl+Shift+Y</kbd></td><td>팝업 열기(엔터로 저장·채우기)</td></tr>
+      <tr><td><kbd>⇧⌘F</kbd> · <kbd>Ctrl+Shift+F</kbd></td><td>커서가 있는 칸 값 기억하기</td></tr>
+    </table>
+    <p class="cap2">다른 단축키와 겹쳐 비어 있으면 <code>chrome://extensions/shortcuts</code>에서 정할 수 있어요(입력값 관리 → 사용법 → 단축키 바꾸기).</p>
+    <p>설치하면 <b>시작하기</b>에서 연습 화면을 한 바퀴 돌아볼 수 있어요. 나중에는 입력값 관리 → 시작하기·연습 화면.</p>
+  </section>
+
+  <div class="foot2">
+    <span>자동 기입기는 무료예요. 도움이 됐다면 <a href="https://ko-fi.com/haydenpark">개발자에게 커피 한 잔</a> ☕</span>
+    <span>잘못 채우거나 오류가 나면 — 버그 제보: <a href="mailto:hayden.park.apps@gmail.com?subject=%5B%EC%9E%90%EB%8F%99%20%EA%B8%B0%EC%9E%85%EA%B8%B0%5D%20%EB%B2%84%EA%B7%B8%20%EC%A0%9C%EB%B3%B4">메일로 알리기</a></span>
+    <span>문의·제안·맞춤 개발: <a href="mailto:hayden.park.apps@gmail.com?subject=%5B%EC%9E%90%EB%8F%99%20%EA%B8%B0%EC%9E%85%EA%B8%B0%5D%20%EB%AC%B8%EC%9D%98">hayden.park.apps@gmail.com</a></span>
+  </div>
+    <p style="margin-top:28px"><a href="index.html">← 자동 기입기 지원</a> · <a href="privacy.html">개인정보 처리방침</a></p>
+</body>
+</html>
